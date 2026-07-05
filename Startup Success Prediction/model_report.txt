@@ -1,0 +1,60 @@
+=======================================================
+  Startup Success Prediction — Model Report
+=======================================================
+
+DATASET
+  Total Records     : 923
+  Features Used     : 31
+  Success (1)       : 597
+  Failure (0)       : 326
+
+TRAIN / TEST SPLIT
+  Training Samples  : 738  (80%)
+  Testing  Samples  : 185  (20%)
+
+MODEL CONFIGURATION
+  Algorithm         : Random Forest Classifier
+  Number of Trees   : 100
+  Max Depth         : 10
+  Random State      : 42
+
+EVALUATION RESULTS
+  Accuracy          : 80.0%
+
+CONFUSION MATRIX
+                  Predicted
+                  Failure   Success
+  Actual Failure :   40        33
+  Actual Success :   4        108
+
+  TN (True Negative)  = 40  → Correctly predicted Failure
+  FP (False Positive) = 33  → Predicted Success, actually Failure
+  FN (False Negative) = 4   → Predicted Failure, actually Success
+  TP (True Positive)  = 108  → Correctly predicted Success
+
+CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+     Failure       0.91      0.55      0.68        73
+     Success       0.77      0.96      0.85       112
+
+    accuracy                           0.80       185
+   macro avg       0.84      0.76      0.77       185
+weighted avg       0.82      0.80      0.79       185
+
+TOP 10 IMPORTANT FEATURES
+   1. age_last_milestone_year             14.65%
+   2. relationships                       13.15%
+   3. funding_total_usd                   11.81%
+   4. age_first_milestone_year            9.46%
+   5. age_last_funding_year               8.78%
+   6. age_first_funding_year              8.27%
+   7. avg_participants                    5.8%
+   8. milestones                          5.08%
+   9. is_top500                           3.6%
+  10. funding_rounds                      3.34%
+
+=======================================================
+  Model saved as  : startup_model.pkl
+  Report saved as : model_report.txt
+=======================================================
